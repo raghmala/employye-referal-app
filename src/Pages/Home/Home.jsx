@@ -1,4 +1,5 @@
-import AppPage from "./Components/AppPage/AppPage";
+import React, { useState } from "react";
+import AppPage from "../../Components/AppPage/AppPage";
 
 function Home() {
   return (
