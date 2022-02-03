@@ -1,14 +1,14 @@
 import React from "react";
 import AppPage from "../../Components/AppPage/AppPage";
 
-function Home() {
+function Refer() {
   return (
-    <div className="App">
+    <div className="refer">
       <AppPage>
-        <h1>Home</h1>
+        <h1>Refer</h1>
       </AppPage>
     </div>
   );
 }
 
-export default Home;
+export default Refer;

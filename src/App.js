@@ -2,6 +2,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import "./App.scss";
 import AppPage from "./Components/AppPage/AppPage";
 import Home from "./Pages/Home/Home";
+import Refer from "./Pages/Refer/Refer";
 
 function App() {
   return (
@@ -9,9 +10,7 @@ function App() {
       <BrowserRouter>
         <Route path="/" exact component={AppPage} />
         <Route path="/home" exact component={Home} />
-        {/* <Route path="/addEntry" component={AddEntry} />
-      <Route path="/vehicleDetails" component={VehiclesDetails} />
-      <Route path="/consolidatedReport" component={ConsolidatedReport} /> */}
+        <Route path="/refer" exact component={Refer} />
       </BrowserRouter>
     </div>
   );

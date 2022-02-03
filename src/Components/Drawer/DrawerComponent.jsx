@@ -37,7 +37,7 @@ const DrawerComponent = (props) => {
     } else if (screen === "myReferrals") {
       // history.push("/cmyReferrals");
     } else if (screen === "referFriend") {
-      // history.push("/referFriend");
+      history.push("/refer");
     }
   };
   return (
