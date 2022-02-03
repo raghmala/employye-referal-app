@@ -1,10 +1,12 @@
 import "./App.scss";
-import Filters from "./Components/Filters/Filters";
+import AppPage from "./Components/AppPage/AppPage";
 
 function App() {
   return (
     <div className="App">
-      <Filters />
+      <AppPage>
+        <h2>Table comes here</h2>
+      </AppPage>
     </div>
   );
 }
