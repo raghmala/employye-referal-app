@@ -16,10 +16,10 @@ import {
   HomeOutlined,
 } from "@mui/icons-material";
 import * as React from "react";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const DrawerComponent = (props) => {
-  // let history = useHistory();
+  let history = useHistory();
   const toggleDrawer = (open) => (event) => {
     if (
       event.type === "keydown" &&
@@ -31,13 +31,13 @@ const DrawerComponent = (props) => {
   };
   const openScreen = (screen) => {
     if (screen === "home") {
-      // history.push("/");
+      history.push("/home");
     } else if (screen === "addNewOpening") {
       // history.push("/addNewOpening");
     } else if (screen === "myReferrals") {
       // history.push("/cmyReferrals");
     } else if (screen === "referFriend") {
-      // history.push("/referFriend");
+      history.push("/refer");
     }
   };
   return (

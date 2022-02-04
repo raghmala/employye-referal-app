@@ -1,3 +1,4 @@
+import { Paper } from "@mui/material";
 import React, { useState } from "react";
 import DrawerComponent from "../Drawer/DrawerComponent";
 import Header from "../Header/Header";
@@ -8,7 +9,9 @@ const AppPage = (props) => {
   return (
     <div className="app-page">
       <Header setDrawerState={(drawerOpen) => setDrawerState(drawerOpen)} />
-      <div className="app-content">{props.children}</div>
+      <Paper className="app-content" elevation={5}>
+        {props.children}
+      </Paper>
       <DrawerComponent
         drawerOpen={drawerState}
         setDrawerState={(drawerOpen) => setDrawerState(drawerOpen)}
