@@ -1,5 +1,4 @@
 import {
-  Link,
   Paper,
   Table,
   TableBody,
@@ -9,10 +8,8 @@ import {
   TableRow,
 } from "@mui/material";
 import React from "react";
-import { useHistory } from "react-router-dom";
 
 const ReferralsTable = (props) => {
-  const history = useHistory();
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
