@@ -1,0 +1,37 @@
+.home {
+  .refer-link,
+  .refer-del {
+    cursor: pointer;
+  }
+
+  &__filter-div {
+    width: 100%;
+    margin: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+
+    &-skills {
+      width: 10rem;
+      margin-right: 1rem;
+    }
+
+    &-location {
+      width: 10rem;
+      margin-right: 1rem;
+    }
+
+    &-exp {
+      width: 10rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .add-button {
+    margin: 2rem 0;
+    float: right;
+  }
+
+  &-footer {
+    width: 100%;
+  }
+}

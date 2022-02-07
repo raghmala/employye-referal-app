@@ -1,0 +1,17 @@
+.MyReferrals {
+  .referred-status {
+    font-weight: bold;
+    &-declined {
+      color: red;
+      font-weight: bold;
+    }
+    &-inProgress {
+      color: green;
+      font-weight: bold;
+    }
+    &-selected {
+      color: blue;
+      font-weight: bold;
+    }
+  }
+}

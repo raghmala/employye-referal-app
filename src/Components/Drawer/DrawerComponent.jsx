@@ -19,6 +19,7 @@ import * as React from "react";
 import { useHistory } from "react-router-dom";
 
 const DrawerComponent = (props) => {
+  const [buttonSelected, setButtonSelected] = React.useState("home");
   let history = useHistory();
   const toggleDrawer = (open) => (event) => {
     if (
@@ -32,12 +33,14 @@ const DrawerComponent = (props) => {
   const openScreen = (screen) => {
     if (screen === "home") {
       history.push("/home");
+      setButtonSelected("home");
     } else if (screen === "addNewOpening") {
       // history.push("/addNewOpening");
     } else if (screen === "myReferrals") {
-      // history.push("/cmyReferrals");
+      history.push("/myReferrals");
     } else if (screen === "referFriend") {
       history.push("/refer");
+      setButtonSelected("refer");
     }
   };
   return (
@@ -53,6 +56,7 @@ const DrawerComponent = (props) => {
         <List>
           <ListItem disablePadding>
             <ListItemButton
+              selected={buttonSelected === "home" ? true : false}
               onClick={() => {
                 openScreen("home");
               }}
@@ -89,6 +93,7 @@ const DrawerComponent = (props) => {
           </ListItem>
           <ListItem disablePadding>
             <ListItemButton
+              selected={buttonSelected === "refer" ? true : false}
               onClick={() => {
                 openScreen("referFriend");
               }}
