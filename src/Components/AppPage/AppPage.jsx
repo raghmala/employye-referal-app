@@ -9,6 +9,7 @@ const AppPage = (props) => {
   return (
     <div className="app-page">
       <Header setDrawerState={(drawerOpen) => setDrawerState(drawerOpen)} />
+      <h1 className="app-page__title">{props.title}</h1>
       <Paper className="app-content" elevation={5}>
         {props.children}
       </Paper>
