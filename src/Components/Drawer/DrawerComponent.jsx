@@ -37,6 +37,8 @@ const DrawerComponent = (props) => {
       setButtonSelected("home");
     } else if (screen === "empRefPolicy") {
       history.push("/referralPolicy");
+    } else if (screen === "addNewOpening") {
+      history.push("/addNewOpening");
     } else if (screen === "myReferrals") {
       history.push("/myReferrals");
     } else if (screen === "referFriend") {
