@@ -5,6 +5,7 @@ import EmpReferralPolicy from "./Pages/EmpReferralPolicy/EmpReferralPolicy";
 import Home from "./Pages/Home/Home";
 import MyReferrals from "./Pages/MyReferrals/MyReferrals";
 import Refer from "./Pages/Refer/Refer";
+import Admin from "./Pages/Admin/Admin";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/refer/:vacancyId" component={Refer} />
         <Route path="/myReferrals" component={MyReferrals} />
         <Route path="/referralPolicy" component={EmpReferralPolicy} />
+        <Route path="/addNewOpening" component={Admin} />
       </BrowserRouter>
     </div>
   );

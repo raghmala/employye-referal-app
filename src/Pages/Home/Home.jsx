@@ -90,7 +90,7 @@ function Home() {
             className="add-button"
             color="primary"
             aria-label="add"
-            onClick={() => history.push("/admin")}
+            onClick={() => history.push("/addNewOpening")}
           >
             <AddIcon />
           </Fab>
