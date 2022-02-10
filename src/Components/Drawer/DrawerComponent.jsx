@@ -14,6 +14,7 @@ import {
   ArticleOutlined,
   GroupAddOutlined,
   HomeOutlined,
+  ReceiptLongOutlined,
 } from "@mui/icons-material";
 import * as React from "react";
 import { useHistory } from "react-router-dom";
@@ -34,8 +35,8 @@ const DrawerComponent = (props) => {
     if (screen === "home") {
       history.push("/home");
       setButtonSelected("home");
-    } else if (screen === "addNewOpening") {
-      // history.push("/addNewOpening");
+    } else if (screen === "empRefPolicy") {
+      history.push("/referralPolicy");
     } else if (screen === "myReferrals") {
       history.push("/myReferrals");
     } else if (screen === "referFriend") {
@@ -65,6 +66,18 @@ const DrawerComponent = (props) => {
                 <HomeOutlined />
               </ListItemIcon>
               <ListItemText primary="Home" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton
+              onClick={() => {
+                openScreen("empRefPolicy");
+              }}
+            >
+              <ListItemIcon>
+                <ReceiptLongOutlined />
+              </ListItemIcon>
+              <ListItemText primary="Employee referral policy" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
