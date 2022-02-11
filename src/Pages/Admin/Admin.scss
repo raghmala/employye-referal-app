@@ -31,3 +31,23 @@
     }
   }
 }
+
+.referred-status {
+  font-weight: bold;
+  margin-right: 1rem;
+  &-declined {
+    color: red;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  &-inProgress {
+    color: green;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  &-selected {
+    color: blue;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+}

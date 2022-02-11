@@ -6,6 +6,7 @@ import {
 } from "react-router-dom/cjs/react-router-dom.min";
 import AppPage from "../../Components/AppPage/AppPage";
 import { ReferredData } from "../../Utils/MockData/ReferredData";
+import { ReferredPeopleData } from "../../Utils/MockData/ReferredPeopleData";
 import { Vacancies } from "../../Utils/MockData/Vacancies";
 import "./Refer.scss";
 
@@ -31,8 +32,12 @@ function Refer() {
     referData.Practice = vacancy.Practice;
     referData.Job_Category = vacancy.Job_Category;
     referData.Skills = vacancy.Skills;
+    referData.referredBy = "Current User";
+    referData.candidateName = name;
+    referData.SF_ATS = vacancy.SF_ATS;
     console.log(referData);
     ReferredData.push(referData);
+    ReferredPeopleData.push(referData);
     history.push("/myReferrals");
   };
 

@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-function Home() {
+function Home(props) {
   const vacancies = Vacancies;
   const skills = [...vacancies];
   const [skill, setSkill] = useState("");
@@ -29,6 +29,7 @@ function Home() {
   const handleExperienceChange = (event) => {
     setExperience(event.target.value);
   };
+  console.log(props.user);
   const history = useHistory();
   return (
     <div className="home">

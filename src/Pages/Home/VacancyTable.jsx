@@ -1,6 +1,10 @@
 import {
+  FormControl,
+  InputLabel,
   Link,
+  MenuItem,
   Paper,
+  Select,
   Table,
   TableBody,
   TableCell,
@@ -8,15 +12,15 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import DeleteSharpIcon from "@mui/icons-material/DeleteSharp";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 const VacancyTable = (props) => {
   const history = useHistory();
   const [vacancies, setVacancies] = useState(props.vacancies);
-  const closeRequirement = (id) => {
-    setVacancies(vacancies.filter((row) => row.id !== id));
+  const [closeRequirement, setCloseRequirement] = useState("");
+  const closeRequirementChange = (event) => {
+    setCloseRequirement(event.target.value);
   };
   return (
     !!vacancies && (
@@ -61,10 +65,19 @@ const VacancyTable = (props) => {
                   </Link>
                 </TableCell>
                 <TableCell align="center">
-                  <DeleteSharpIcon
-                    className="refer-del"
-                    onClick={() => closeRequirement(row.id)}
-                  />
+                  <FormControl fullWidth>
+                    <InputLabel id="close-lbl">Closed Status</InputLabel>
+                    <Select
+                      labelId="close-lbl"
+                      id="close-select"
+                      value={closeRequirement ? closeRequirement : ""}
+                      label="Location"
+                      onChange={closeRequirementChange}
+                    >
+                      <MenuItem>{"Filled By Employee Referral"}</MenuItem>
+                      <MenuItem>{"Closed"}</MenuItem>
+                    </Select>
+                  </FormControl>
                 </TableCell>
               </TableRow>
             ))}
