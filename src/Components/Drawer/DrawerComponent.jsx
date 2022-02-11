@@ -14,6 +14,7 @@ import {
   ArticleOutlined,
   GroupAddOutlined,
   HomeOutlined,
+  AssignmentIndOutlined,
   ReceiptLongOutlined,
 } from "@mui/icons-material";
 import * as React from "react";
@@ -39,10 +40,12 @@ const DrawerComponent = (props) => {
       history.push("/referralPolicy");
     } else if (screen === "addNewOpening") {
       history.push("/addNewOpening");
+    } else if (screen === "referredPeople") {
+      history.push("/referredPeople");
     } else if (screen === "myReferrals") {
       history.push("/myReferrals");
     } else if (screen === "referFriend") {
-      history.push("/refer");
+      history.push("/home");
       setButtonSelected("refer");
     }
   };
@@ -97,6 +100,18 @@ const DrawerComponent = (props) => {
           <ListItem disablePadding>
             <ListItemButton
               onClick={() => {
+                openScreen("referredPeople");
+              }}
+            >
+              <ListItemIcon>
+                <AssignmentIndOutlined />
+              </ListItemIcon>
+              <ListItemText primary="Referred People" />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton
+              onClick={() => {
                 openScreen("myReferrals");
               }}
             >
@@ -106,7 +121,7 @@ const DrawerComponent = (props) => {
               <ListItemText primary="My Referrals" />
             </ListItemButton>
           </ListItem>
-          <ListItem disablePadding>
+          {/* <ListItem disablePadding>
             <ListItemButton
               selected={buttonSelected === "refer" ? true : false}
               onClick={() => {
@@ -118,7 +133,7 @@ const DrawerComponent = (props) => {
               </ListItemIcon>
               <ListItemText primary="Refer Your Friend" />
             </ListItemButton>
-          </ListItem>
+          </ListItem> */}
         </List>
       </Box>
     </Drawer>
