@@ -12,6 +12,7 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
+import logo from "../../Utils/Images/LinkedIn_logo_initials.png";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
@@ -38,6 +39,7 @@ const VacancyTable = (props) => {
               <TableCell>Center</TableCell>
               <TableCell>Refer</TableCell>
               <TableCell align="center">Close Requirement</TableCell>
+              <TableCell>Share</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -78,6 +80,9 @@ const VacancyTable = (props) => {
                       <MenuItem>{"Closed"}</MenuItem>
                     </Select>
                   </FormControl>
+                </TableCell>
+                <TableCell>
+                  <img src={logo} width="30" height="30" />
                 </TableCell>
               </TableRow>
             ))}
