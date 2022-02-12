@@ -4,7 +4,7 @@ import "./EmpReferralPolicy.scss";
 
 function EmpReferralPolicy() {
   return (
-    <div>
+    <div className="referralPolicy">
       <AppPage title="Employee Referral Policy">
         <p>
           <span className="bold">Overview: </span>TEKsystems Global Services
